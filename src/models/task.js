@@ -7,4 +7,5 @@ const task = new Schema({
     precio: Number
     });
 
+    
 module.exports = mongoose.model('task', task);
