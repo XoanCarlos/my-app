@@ -14,8 +14,15 @@
                   <input class="col-xs-3" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
-            </div>
+            </div>          
           </div>
         </nav>
+        <figure class="text-center">
+        <blockquote class="blockquote">
+          <div class="position-absolute top-50 start-50 translate-middle">
+              This is home of a taxi management project. Book us ours cabs.
+          </div>
+         </blockquote> 
+         </figure>
      </div> 
 </template>
