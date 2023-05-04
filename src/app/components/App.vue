@@ -2,13 +2,13 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="collpase navbar-collapse">
-            <a class="navbar-brand" href="/">
+            <router-link to="/" class="navbar-brand">
             <img src="img/taxi.svg" alt="" width="50" height="40" class="d-inline-block align-text-top">    
-            </a>    
-            <a href="/" class="navbar-brand nav-link active">Home</a>
-            <a href="#" class="navbar-brand">Services</a>
-            <a href="#" class="navbar-brand">Fleet</a>
-            <a href="#" class="navbar-brand">About</a>
+            </router-link>    
+            <router-link to = "/" class="navbar-brand nav-link active">Home</router-link>
+            <router-link to = "/servicesitem" class="navbar-brand">Services</router-link>
+            <router-link to="/taxifleet" class="navbar-brand">Fleet</router-link>
+            <router-link to="/aboutus" class="navbar-brand">About</router-link>
             <div class="container">
                 <form class="d-flex">
                   <input class="col-xs-3" type="search" placeholder="Search" aria-label="Search">
@@ -17,12 +17,14 @@
             </div>          
           </div>
         </nav>
-        <figure class="text-center">
-        <blockquote class="blockquote">
-          <div class="position-absolute top-50 start-50 translate-middle">
-              This is home of a taxi management project. Book us ours cabs.
-          </div>
-         </blockquote> 
-         </figure>
+        <body>
+          <div class="container">
+            <thead>
+            <tr>
+              <router-view/>
+            </tr>
+          </thead>
+        </div>
+        </body>
      </div> 
 </template>
