@@ -12,9 +12,6 @@ app.use(morgan('combined'));
 app.use(express.json());
 
 
-//routes
-app.use('/travel', require('./routes/travel'));
-
 
 //static files
 app.use(express.static(__dirname + '/public'))

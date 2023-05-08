@@ -3,6 +3,7 @@ import ServicesItem from '../app/components/ServicesItem.vue'
 import AboutUs from '../app/components/AboutUs.vue'
 import TaxiFleet from '../app/components/TaxiFleet.vue'
 import HomeUs from '../app/components/HomeUs.vue'
+import NotFound from '../app/components/NotFound.vue';
 
 const routes = [{
     path: '/servicesitem',
@@ -23,12 +24,18 @@ const routes = [{
     path: '/',
     name: 'HomeUs',
     component: HomeUs
+   },
+   {
+     path: '/:pathMatch(.*)*',
+     redirect: "404",
+     name: 'NotFound',
+     component: NotFound
    }
-
 ]
 
 const router = createRouter({
   history: createWebHistory(),
+  mode: 'history',
   routes
 })
 
