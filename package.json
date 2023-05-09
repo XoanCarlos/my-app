@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "server": "nodemon ./src/server.js",
-    "webpack": "webpack --mode production --history-api-fallback --watch"
+    "webpack": "webpack --mode development --watch"
   },
   "dependencies": {
     "core-js": "^3.8.3",

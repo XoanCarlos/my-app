@@ -27,7 +27,8 @@ const routes = [{
    },
    {
      path: "/:catchAll(.*)",
-     redirect: NotFound
+     name: "NotFound",
+     component: NotFound
    }
 ]
 

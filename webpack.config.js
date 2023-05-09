@@ -19,10 +19,8 @@ module: {
         {
             test: /\.vue$/,
             loader: 'vue-loader'
-        },
-        {
-            historyApiFallback: true
         }
+        
     ]
 },
 plugins:[

@@ -12,6 +12,7 @@ app.use(morgan('combined'));
 app.use(express.json());
 
 //routes
+app.use('/api/tasks',require('./router/tasks'));
 
 //static files
 app.use(express.static(__dirname + '/public'))
