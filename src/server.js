@@ -11,7 +11,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(morgan('combined'));
 app.use(express.json());
 
-
+//routes
 
 //static files
 app.use(express.static(__dirname + '/public'))

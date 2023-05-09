@@ -26,10 +26,8 @@ const routes = [{
     component: HomeUs
    },
    {
-     path: '/:pathMatch(.*)*',
-     redirect: "404",
-     name: 'NotFound',
-     component: NotFound
+     path: "/:catchAll(.*)",
+     redirect: NotFound
    }
 ]
 
@@ -39,4 +37,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;
