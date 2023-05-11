@@ -5,15 +5,15 @@
         <form @submit.prevent = "addTask" class="border p-3 form">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                            <input type="text" v-model = "task.destino" placeholder="Service" class="form-control">
+                            <input type="text" v-model = "task.destino" placeholder="Service to" class="form-control">
                         <br>
                              </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group cold-md-6">
-                            <input type="text" v-model = "task.distancia" placeholder="Distance" class="form-control">
+                            <input type="text" v-model = "task.distancia" placeholder="Distance km 00.00" class="form-control" id="floput" oninput="changeComaPoint();">
                         <br>
-                            <input type="text" v-model = "task.precio" placeholder="Price" class="form-control">
+                            <input type="text" v-model = "task.precio" placeholder="Price (€) 00.00" class="form-control">
                             </div>
                         <br>
                         </div>
@@ -54,8 +54,14 @@ class Task{
                 .then(res=> res.json())
                 .then(data => console.log(data))
                 this.task = new Task();
-            }
+            },
+            changeComaPoint() {
+            var ele = document.getElementById("floput");
+            ele.value = ele.value.replace(",", ".");
+
         }
+      }
     }
+
                 
 </script>
