@@ -1,4 +1,4 @@
-<template xmlns="http://www.w3.org/1999/html">
+<template>
   <div class="m-5 vh-80 row justify-content-center align-items-center">
     <div class="card co-auto bg-light p-5 text-center">
       <div class="card-body">       
@@ -55,6 +55,7 @@ class Task{
                 .then(data => console.log(data))
                 this.task = new Task();
             },
+
             changeComaPoint() {
             var ele = document.getElementById("floput");
             ele.value = ele.value.replace(",", ".");

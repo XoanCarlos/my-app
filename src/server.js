@@ -6,13 +6,19 @@ const mongoose = require('mongoose');
 //express configuration
 app.set('port', process.env.PORT || 3000);
 
+//history
+const history = require('connect-history-api-fallback');
+app.use(history());
+
 
 //middlwera
 app.use(morgan('combined'));
 app.use(express.json());
 
+
 //routes
 app.use('/api/tasks',require('./router/tasks'));
+
 
 //static files
 app.use(express.static(__dirname + '/public'))
