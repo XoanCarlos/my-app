@@ -34,9 +34,7 @@ const routes = [{
      path: "/:catchAll(.*)",
      name: "NotFound",
      component: NotFound
->>>>>>> f1e47cddf9645a34b70e1bd49c84315721e39984
    }
-   
 ]
 
 const router = createRouter({
