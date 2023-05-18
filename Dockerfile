@@ -22,7 +22,7 @@ COPY . .
 RUN npm run build
 
 #en la máquina docker le decimos que se ejecute en el puerto que se indica
-EXPOSE 10100
+EXPOSE 3000
 
 #es el comando que ejecuta la aplicación en el contenedor
 CMD ["http-server", "public"]
