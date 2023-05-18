@@ -4,9 +4,9 @@ module.exports = {
     entry: './src/app/index.js',
     output: {
         path: __dirname + '/src/public/js',
-        filename: 'bundle.js'
-    
+        filename: 'bundle.js'   
 },
+
 module: {
     rules: [
         {
@@ -20,6 +20,7 @@ module: {
             test: /\.vue$/,
             loader: 'vue-loader'
         }
+        
     ]
 },
 plugins:[

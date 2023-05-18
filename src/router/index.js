@@ -3,6 +3,10 @@ import ServicesItem from '../app/components/ServicesItem.vue'
 import AboutUs from '../app/components/AboutUs.vue'
 import TaxiFleet from '../app/components/TaxiFleet.vue'
 import HomeUs from '../app/components/HomeUs.vue'
+<<<<<<< HEAD
+=======
+import NotFound from '../app/components/NotFound.vue';
+>>>>>>> f1e47cddf9645a34b70e1bd49c84315721e39984
 
 const routes = [{
     path: '/servicesitem',
@@ -23,6 +27,14 @@ const routes = [{
     path: '/',
     name: 'HomeUs',
     component: HomeUs
+<<<<<<< HEAD
+=======
+   },
+   {
+     path: "/:catchAll(.*)",
+     name: "NotFound",
+     component: NotFound
+>>>>>>> f1e47cddf9645a34b70e1bd49c84315721e39984
    }
 
 ]
@@ -32,4 +44,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;
