@@ -4,8 +4,8 @@
         Estos son nuestros servicios
     </div>
    </div>
-</template>
-=======
+
+
   <div class="m-5 vh-80 row justify-content-center align-items-center">
     <div class="card co-auto bg-light p-5 text-center">
       <div class="card-body">       
@@ -73,4 +73,4 @@ class Task{
 
                 
 </script>
->>>>>>> f1e47cddf9645a34b70e1bd49c84315721e39984
+
