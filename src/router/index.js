@@ -25,8 +25,6 @@ const routes = [{
     path: '/',
     name: 'HomeUs',
     component: HomeUs
-<<<<<<< HEAD
-=======
    },
    {
      path: "/:catchAll(.*)",
