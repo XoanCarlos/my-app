@@ -1,4 +1,11 @@
 <template>
+    <div class="row">
+        <div class="col-md-12">
+        Estos son nuestros servicios
+    </div>
+   </div>
+
+
   <div class="m-5 vh-80 row justify-content-center align-items-center">
     <div class="card co-auto bg-light p-5 text-center">
       <div class="card-body">       
@@ -66,3 +73,4 @@ class Task{
 
                 
 </script>
+
