@@ -10,6 +10,14 @@
     <div class="card co-auto bg-light p-5 text-center">
       <div class="card-body">       
         <form @submit.prevent = "addTask" class="border p-3 form">
+               <!--         <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <select id="taxi" placeholder="Taxi" >
+                                    <option value = "">Choose a Cab</option>
+                                </select>
+                            </div>
+                            <br> 
+                        </div>-->
                         <div class="form-row">
                             <div class="form-group col-md-6">
                             <input type="text" v-model = "task.destino" placeholder="Service to" class="form-control">

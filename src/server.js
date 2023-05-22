@@ -18,6 +18,7 @@ app.use(express.json());
 
 //routes
 app.use('/api/tasks',require('./router/tasks'));
+app.use('/api/cabs',require('./router/cabs'));
 
 
 //static files
