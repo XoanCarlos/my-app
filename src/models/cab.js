@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const cab = new Schema({
     target: String,
     price: Number,
-    driver: Number
+    driver: String
     });
 
     

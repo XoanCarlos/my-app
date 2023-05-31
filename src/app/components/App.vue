@@ -8,6 +8,7 @@
             <router-link to = "/" class="navbar-brand nav-link active">Home</router-link>
             <router-link to = "/servicesitem" class="navbar-brand">Services</router-link>
             <router-link to="/taxifleet" class="navbar-brand">Fleet</router-link>
+            <router-link to="/#" class="navbar-brand">Clients</router-link>
             <router-link to="/aboutus" class="navbar-brand">About</router-link>
 
             
