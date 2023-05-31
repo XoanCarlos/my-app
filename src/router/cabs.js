@@ -12,4 +12,11 @@ router.post('/', async (req, res) =>{
 });
 
 
+router.get('/', async (req, res) =>{
+    const cabs = await Cab.find();
+   
+    res.json(cabs);
+ });
+ 
+
 module.exports = router;

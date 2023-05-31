@@ -38,8 +38,33 @@
                     </form>
             </div>
         </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="col-md-7">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Target</th>
+                        <th>Price</th>
+                        <th>Driver</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="cab of cabs" :key="cab._id">
+                    <td>{{ cab.target }}</td>
+                    <td>{{ cab.price }}</td>
+                    <td> {{ cab.driver }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>          
   </template>
+
+
+
+
 
 <script>
 class Cab{
@@ -70,6 +95,17 @@ class Cab{
                 .then(data => console.log(data))
                 this.cab = new Cab();
             },
+
+            
+            listCabs() {
+                fetch ('api/cabs')
+                .then(res => res.json())
+                .then(data => {
+                    this.cabs = data;
+                    console.log(this.cabs)
+                });
+            },
+
 
             changeComaPoint() {
             var ele = document.getElementById("floput");
