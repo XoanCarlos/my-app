@@ -15,7 +15,7 @@
     "mongod": "^2.0.0",
     "mongoose": "^7.1.1",
     "morgan": "^1.10.0",
-    "vue-router": "^4.2.1"
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",

@@ -3,10 +3,11 @@ import ServicesItem from '../app/components/ServicesItem.vue'
 import AboutUs from '../app/components/AboutUs.vue'
 import TaxiFleet from '../app/components/TaxiFleet.vue'
 import HomeUs from '../app/components/HomeUs.vue'
-import NotFound from '../app/components/NotFound.vue';
+import NotFound from '../app/components/NotFound.vue'
 
 
-const routes = [{
+const routes = [
+  {
     path: '/servicesitem',
     name: 'ServicesItem',
     component: ServicesItem
@@ -42,5 +43,4 @@ const router = createRouter({
   routes
 })
 
-
-export default router;
+export default router

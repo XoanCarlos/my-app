@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Cab = require('../models/cab');
+const { createBaseVNode } = require('vue');
 
 router.post('/', async (req, res) =>{
    const cab = new Cab(req.body);
@@ -14,9 +15,8 @@ router.post('/', async (req, res) =>{
 
 router.get('/', async (req, res) =>{
     const cabs = await Cab.find();
-   
     res.json(cabs);
- });
- 
-
+    });
+    
+     
 module.exports = router;

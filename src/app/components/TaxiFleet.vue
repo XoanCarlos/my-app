@@ -40,7 +40,7 @@
         </div>
     </div>
     <br>
-    <div class="container">
+  <div class="container">
         <div class="col-md-7">
             <table class="table table-bordered">
                 <thead>
@@ -51,10 +51,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="cab of cabs" :key="cab._id">
-                    <td>{{ cab.target }}</td>
-                    <td>{{ cab.price }}</td>
-                    <td> {{ cab.driver }}</td>
+                    <tr v-for="(key, value) of cabs">
+                    <td>{{ key }} {{target }}</td>
+                    <td>{{ key }} {{price }}</td>
+                   
                     </tr>
                 </tbody>
             </table>
@@ -63,10 +63,8 @@
   </template>
 
 
-
-
-
 <script>
+
 class Cab{
     constructor(target, price, driver){
         this.target = target;
@@ -77,10 +75,28 @@ class Cab{
     export default{
         data(){
             return{
-                cab: new Cab()
+                cab: new Cab(),
+                cabs: { target: "aaa1111",
+                        price: 12000,
+                        driver: "felix"                       
+                       }
             }
         },
+
+        mounted(){
+            this.listCabs();
+        },
+        
         methods:{
+            listCabs(){   
+                fetch('api/cabs') 
+                .then(res => res.json())
+                .then(data => {
+                    this.cabs = data;
+                    console.log(this.cabs);      
+               })            
+            },
+
             addCab(){
                 fetch('/api/cabs',
                 {
@@ -95,18 +111,7 @@ class Cab{
                 .then(data => console.log(data))
                 this.cab = new Cab();
             },
-
-            
-            listCabs() {
-                fetch ('api/cabs')
-                .then(res => res.json())
-                .then(data => {
-                    this.cabs = data;
-                    console.log(this.cabs)
-                });
-            },
-
-
+          
             changeComaPoint() {
             var ele = document.getElementById("floput");
             ele.value = ele.value.replace(",", ".");
@@ -114,7 +119,6 @@ class Cab{
         }
       }
     }
-
                 
 </script>
 
